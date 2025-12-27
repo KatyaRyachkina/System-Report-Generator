@@ -61,45 +61,6 @@ bash
 
 python system_report.py --print
 
-# Пример использования генератора 4.
-
-# Создание отчета с конкретным именем файла
-
-bash
-
-python system_report.py -o my_computer_report --format text
-
-# Пример использования генератора 5.
-
-# Создание JSON отчета для интеграции с системами мониторинга
-
-bash
-
-python system_report.py --format json -o server_status_$(date +%Y%m%d)
-
-# Пример использования генератора 6.
-
-# Регулярный мониторинг с автоматическими именами файлов
-
-bash
-
-python system_report.py --format text
-# Создаст файл с именем типа system_report_20231215_143022.txt
-
-# Пример использования генератора 7.
-
-# Создание отчета для отправки по email или в чат поддержки
-
-bash
-
-python system_report.py --format text -o diagnostic_report --print
-
-# Пример использования генератора 8.
-
-# Использование в скриптах для автоматического сбора статистики
-
-bash
-
 #!/bin/bash
 # Ежедневный сбор системной информации
 python system_report.py --format json -o /var/log/system_reports/$(hostname)_$(date +%Y%m%d).json
